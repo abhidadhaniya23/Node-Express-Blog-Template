@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --heightPic: 50vh;
+}
+
+.header {
+    height: 70vh;
+    background: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #B2FCFF calc(40% + 1px), #B2FCFF 60%, #5EDFFF calc(60% + 1px), #5EDFFF 72%, #3E64FF calc(72% + 1px), #3E64FF 100%);
+}
+
+@font-face {
+    font-family: 'headerFont';
+    src: url('../fonts/font.woff');
+}
+.headerFont{
+    font-family: 'headerFont';
+}
+.txtFont{
+    font-family: 'Gowun Dodum', sans-serif;
+}

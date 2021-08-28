@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs');%>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>
+            <%= title%>
+        </title>
+        <%- include('../partials/stylesheetLink.ejs');%>
+            <style>
+                .bg-Container {
+                    /* background-image: url(../img/about-bg.jpg); */
+                    background: rgb(219, 234, 254);
+                    height: 45vh;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+            </style>
+</head>
+
+<body>
+
+    <div class="header flex flex-col justify-center">
+        <div class="ml-24">
+            <h1 class="text-5xl headerFont text-gray-700">
+                <%= postTitle%>
+            </h1>
+            <div class="flex flex-row text-xl mt-3 opacity-80 txtFont">
+                <p class="mx-2.5"><i class="fa fa-clock opacity-25" style="position: relative; top: -2px;"></i> May-2021 ,</p>
+                <p class="mx-2.5"><i class="fa fa-user opacity-25" style="position: relative; top: -2px;"></i> By, Abhi D.</p>
+            </div>
+            <p class="mt-5 bg-yellow-400 rounded txtFont text-xl w-min py-3 px-5">#Programming</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs');%>
+        <title>
+            <%= title%>
+        </title>
+        <%- include('../partials/stylesheetLink.ejs');%>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+                .poppins-font {
+                    font-family: 'Poppins', sans-serif;
+                }
+            </style>
+</head>
+
+<body class="h-screen">
+    <div class="h-screen bg-red-50 poppins-font flex flex-col justify-center items-center">
+        <h1 class="text-8xl text-gray-900 poppins-font">4<span class="text-red-500 poppins-font">0</span>4</h1>
+        <p class="text-2xl mt-2 text-gray-500">Oops! Nothing was found...</p>
+        <a class="text-lg mt-6 outline-dotted-cool-gray-400 bg-gray-800 text-gray-100 py-2 px-5 rounded-sm"
+            href="/">Return To Homepage</a>
+    </div>
+</body>
+
+</html>
