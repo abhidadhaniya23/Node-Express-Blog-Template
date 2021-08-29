@@ -7,6 +7,7 @@
             <%= title%>
         </title>
         <%- include('./partials/stylesheetLink.ejs');%>
+            <link rel="stylesheet" href="css/style.css">
             <style>
                 .bg-Container {
                     /* background-image: url(../img/about-bg.jpg); */
@@ -15,6 +16,7 @@
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
+                    background-attachment: fixed;
                 }
             </style>
 </head>
@@ -22,30 +24,39 @@
 <body>
 
     <div id="header" class="bg-Container headerFont bg-blue-100 text-center flex align-middle justify-center flex-col">
-        <p class="text-6xl">About Us</p>
+        <p class="text-6xl text-gray-600"><i class="fa fa-user opacity-50"></i> About Us</p>
     </div>
 
-    <div class="p-4"></div>
-
-    <div class="w-11/12 txtFont md:w-7/12 my-6 mx-auto py-10">
-        <p class="px-2 my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus mollitia libero
-            praesentium assumenda velit aliquam eveniet. Voluptate sunt, cumque suscipit voluptates non corrupti
-            obcaecati, aut quidem reprehenderit quam assumenda nobis!</p>
-        <p class="px-2 my-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus optio expedita
-            molestias. Pariatur, beatae ea. Exercitationem veniam molestias, illo aspernatur eligendi cumque delectus
-            fuga unde voluptatum odio atque reprehenderit quia nulla ab quis sunt. Explicabo, aspernatur asperiores.
-            Cupiditate, ipsum animi perspiciatis excepturi eum, aliquid quasi deserunt adipisci itaque, maxime
-            similique!</p>
-        <p class="px-2 my-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem culpa dignissimos esse
-            praesentium, quibusdam ea blanditiis eum suscipit incidunt beatae expedita voluptates tempore consectetur
-            aperiam maiores quaerat totam adipisci at minima, unde nemo. Excepturi distinctio cumque unde esse delectus
-            ea quidem! Maiores, mollitia eaque. Enim, neque consequuntur eum facilis iste ab nobis dolores a sapiente
-            provident vero explicabo quod repellendus! Asperiores molestias nulla officiis, quia vero eius praesentium?
-            Minima ipsa necessitatibus aspernatur assumenda, vitae in vel minus delectus perferendis qui possimus
-            praesentium consectetur asperiores molestiae aliquam eos? Doloribus quam eligendi distinctio earum amet
-            necessitatibus officia unde non, a facere nulla.</p>
+    <div class="text-xl relative txtFont">
+        <div class="w-11/12 md:w-7/12 my-6 mx-auto py-10">
+            <%-include('./partials/socialMedia.ejs')%>
+            <p class="px-2 my-5 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus mollitia libero
+                praesentium assumenda velit aliquam eveniet. Voluptate sunt, cumque suscipit voluptates non corrupti
+                obcaecati, aut quidem reprehenderit quam assumenda nobis!</p>
+                <p class="px-2 my-5 text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus optio expedita
+                    molestias. Pariatur, beatae ea. Exercitationem veniam molestias, illo aspernatur eligendi cumque
+                delectus
+                fuga unde voluptatum odio atque reprehenderit quia nulla ab quis sunt. Explicabo, aspernatur asperiores.
+                Cupiditate, ipsum animi perspiciatis excepturi eum, aliquid quasi deserunt adipisci itaque, maxime
+                similique!</p>
+            <p class="px-2 my-5 text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem culpa dignissimos
+                esse
+                praesentium, quibusdam ea blanditiis eum suscipit incidunt beatae expedita voluptates tempore
+                consectetur
+                aperiam maiores quaerat totam adipisci at minima, unde nemo. Excepturi distinctio cumque unde esse
+                delectus
+                ea quidem! Maiores, mollitia eaque. Enim, neque consequuntur eum facilis iste ab nobis dolores a
+                sapiente
+                provident vero explicabo quod repellendus! Asperiores molestias nulla officiis, quia vero eius
+                praesentium?
+                Minima ipsa necessitatibus aspernatur assumenda, vitae in vel minus delectus perferendis qui possimus
+                praesentium consectetur asperiores molestiae aliquam eos? Doloribus quam eligendi distinctio earum amet
+                necessitatibus officia unde non, a facere nulla.</p>
+        </div>
     </div>
 
+    <%-include('./partials/subscribe.ejs')%>
+    
     <script src="js/about.js"></script>
 </body>
 
