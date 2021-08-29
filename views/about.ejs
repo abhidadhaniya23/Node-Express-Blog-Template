@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head.ejs');%>
+    <%- include('./partials/head.ejs');%>
         <title>
             <%= title%>
         </title>
-        <%- include('../partials/stylesheetLink.ejs');%>
+        <%- include('./partials/stylesheetLink.ejs');%>
             <style>
                 .bg-Container {
                     /* background-image: url(../img/about-bg.jpg); */
@@ -21,11 +21,13 @@
 
 <body>
 
-    <div id="header" class="bg-Container bg-blue-100 text-center flex align-middle justify-center flex-col">
+    <div id="header" class="bg-Container headerFont bg-blue-100 text-center flex align-middle justify-center flex-col">
         <p class="text-6xl">About Us</p>
     </div>
 
-    <div class="w-11/12 md:w-7/12 my-6 mx-auto py-10">
+    <div class="p-4"></div>
+
+    <div class="w-11/12 txtFont md:w-7/12 my-6 mx-auto py-10">
         <p class="px-2 my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus mollitia libero
             praesentium assumenda velit aliquam eveniet. Voluptate sunt, cumque suscipit voluptates non corrupti
             obcaecati, aut quidem reprehenderit quam assumenda nobis!</p>
