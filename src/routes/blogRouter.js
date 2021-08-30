@@ -15,13 +15,7 @@ const postsData = require('../json/postsData.json')
 // })
 
 blogRouter.get('/', async (req, res) => {
-    try {
-        // console.log(postsData);
-    } catch (error) {
-        console.log(error);
-    }
     res.render('index.ejs', {
-        // postsJsonData: JSON.parse(postsData)
         postsJsonData: postsData
     })
 })

@@ -5,6 +5,20 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ['Raleway']
+      },
+      colors: {
+        blue: {
+          DEFAULT: '#0af'
+        },
+        skin: {
+          DEFAULT: '#FFEDDA'
+        },
+        yellow: {
+          DEFAULT: '#FFB830'
+        },
+        red: {
+          DEFAULT: '#FF2442'
+        }
       }
     }
   },
