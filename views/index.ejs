@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs');%>
+        <title>Time Square Blogs</title>
+        <%- include('./partials/stylesheetLink.ejs');%>
+            <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="header flex flex-col justify-center align-middle">
+        <h1 class="headerFont my-8 text-7xl text-gray-800 font-normal text-center">TIME SQUARE BLOGS</h1>
+        <p class="px-48 text-2xl text-gray-500 txtFont text-center mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Beatae corrupti nemo impedit, veritatis vel dolorem quis, rerum est molestiae commodi.</p>
+    </div>
+
+
+    <div class="flex flex-col justify-center bg-gray-100 py-16">
+
+        <h2 class="pb-9 headerFont text-5xl text-center text-gray-700">Latest Posts</h2>
+
+        <div class="flex flex-row justify-center items-baseline">
+
+            <% postsJsonData.forEach(element=> { %>
+                <div class="flex flex-col m-4 w-1/4 shadow-xl">
+                    <div class="h-52 bg-red-500">
+                        <img src="">
+                    </div>
+                    <div class="flex flex-col p-4 bg-gray-50 max-h-96">
+                        <a href="/<%= (element.postId) %>" class="border-l-4 pl-5 py-2 text-red-500 border-red-500 interFont text-2xl hover:text-gray-600 duration-200">
+                            <%= element.postName %>
+                        </a>
+                        <p class="text-lg interFont mt-3"><i class="fa fa-clock opacity-50 mr-3"></i>
+                            <%= element.updatedDate %>
+                        </p>
+                        <p class="text-lg interFont mt-2 bg-gray-200 w-min py-2 px-4 rounded">#<%= element.hashTag %>
+                        </p>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+
+    </div>
+
+    <%- include('./partials/subscribe.ejs');%>
+
+
+
+</body>
+
+</html>

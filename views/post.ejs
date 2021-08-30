@@ -4,7 +4,7 @@
 <head>
     <%- include('./partials/head.ejs');%>
         <title>
-            <%= title%>
+            <%= title%> ~ Time Square Blogs
         </title>
         <%- include('./partials/stylesheetLink.ejs');%>
             <style>
@@ -24,15 +24,17 @@
     <div class="header flex flex-col justify-center">
         <div class="ml-24">
             <h1 class="text-5xl headerFont text-gray-700">
-                <%= postTitle%>
+                <%= title%>
             </h1>
-            <div class="flex flex-row text-xl mt-3 opacity-80 txtFont">
-                <p class="mx-2.5"><i class="fa fa-clock opacity-25" style="position: relative; top: -2px;"></i> May-2021 ,</p>
-                <p class="mx-2.5"><i class="fa fa-user opacity-25" style="position: relative; top: -2px;"></i> By, Abhi D.</p>
+            <div class="flex flex-row text-xl mt-3 opacity-80 interFont">
+                <p class="mx-2.5"><i class="fa fa-clock opacity-25"></i> <%=updateDate%> ,</p>
+                <p class="mx-2.5"><i class="fa fa-user opacity-25"></i> D. Abhi</p>
             </div>
-            <p class="mt-5 bg-yellow-400 rounded txtFont text-xl w-min py-3 px-5">#Programming</p>
+            <p class="mt-5 bg-yellow-400 rounded interFont text-xl w-min py-3 px-5">#<%= hashTag %></p>
         </div>
     </div>
+
+    <p><%= content %></p>
 
 
 </body>

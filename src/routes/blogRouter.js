@@ -1,32 +1,37 @@
+const { json } = require('express')
 const express = require('express')
 const blogRouter = express.Router()
-const fetch=require('node-fetch')
-const axios = require('axios')
 const path = require('path')
-
-// console.log(path.join(__dirname, '../json', 'postsData.json'))
+const postsData = require('../json/postsData.json')
 
 // using middleware
-// console.log(path.join(__dirname,'../json','postsData.json'));
 // blogRouter.use('/', async (req, res, next) => {
-    // try {
-    // } catch (error) {
-    //     console.log(error);
-    // }
-    // const response = await fetch('src/json/postsData.json');
-    // const user = await response.json();
-    // console.log(user);
-
-    // console.log(req.url)
-    // next()
+//     try {
+//         console.log(postsData);
+//     } catch (error) {
+//         console.log(error);
+//     }
+//     next()
 // })
 
 blogRouter.get('/', async (req, res) => {
-    // let response = await axios.get(path.join(__dirname, '../json', 'postsData.json'))
-    // console.log(response);
-
-    res.render('about.ejs', {
-        title: 'About Us || Time Square Blogs'
+    try {
+        // console.log(postsData);
+    } catch (error) {
+        console.log(error);
+    }
+    res.render('index.ejs', {
+        // postsJsonData: JSON.parse(postsData)
+        postsJsonData: postsData
+    })
+})
+blogRouter.get('/:postId', async (req, res) => {
+    const post=postsData.find(post=>post.postId==req.params.postId)
+    res.render('post.ejs',{
+        title: post.postName,
+        content: post.Content,
+        hashTag: post.hashTag,
+        updateDate: post.updatedDate
     })
 })
 blogRouter.get('/about', async (req, res) => {
