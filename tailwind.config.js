@@ -7,17 +7,11 @@ module.exports = {
         body: ['Raleway']
       },
       colors: {
-        blue: {
-          DEFAULT: '#0af'
+        green: {
+          DEFAULT: '#00b28b'
         },
-        skin: {
-          DEFAULT: '#FFEDDA'
-        },
-        yellow: {
-          DEFAULT: '#FFB830'
-        },
-        red: {
-          DEFAULT: '#FF2442'
+        orange: {
+          DEFAULT: '#ff4400'
         }
       }
     }

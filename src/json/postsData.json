@@ -5,7 +5,7 @@
         "Content": "lorem",
         "popular":"true",
         "hashTag": "Programming",
-        "imgSrc":"",
+        "imgSrc":"/img/postImg/1.jpg",
         "updatedDate":"May 2021"
     },
     {
@@ -14,7 +14,7 @@
         "Content": "lorem",
         "popular":"true",
         "hashTag": "WorkFromHome",
-        "imgSrc":"",
+        "imgSrc":"/img/postImg/2.jpg",
         "updatedDate":"April 2021"
     },
     {
@@ -23,7 +23,7 @@
         "Content": "lorem",
         "popular":"true",
         "hashTag": "Learning",
-        "imgSrc":"",
+        "imgSrc":"/img/postImg/3.jpg",
         "updatedDate":"July 2021"
     }
 ]

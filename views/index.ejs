@@ -10,12 +10,12 @@
 
 <body>
 
-    <div class="bg-gray-100 flex flex-col sm:flex-row justify-evenly items-center min-h-screen sm:py-0 py-16">
+    <div class="bg-orange flex flex-col sm:flex-row justify-evenly items-center min-h-screen sm:py-0 py-16">
         <div class=""><img class="rounded-full w-2/3 sm:w-1/2 mx-auto sm:block hidden" src="/img/poster.jpg"></div>
         <div class="sm:text-left w-11/12 text-center sm:w-2/3">
-            <h1 class="headerFont my-8 text-6xl text-gray-800 font-normal">TIME SQUARE BLOGS</h1>
+            <h1 class="headerFont my-8 text-6xl text-gray-50 font-normal">TIME SQUARE BLOGS</h1>
             <div class=""><img class="rounded-full w-2/3 mb-12 sm:w-1/2 mx-auto block sm:hidden" src="/img/poster.jpg"></div>
-            <p class="text-2xl text-gray-500 txtFont mx-auto">Lorem ipsum, dolor sit amet consectetur
+            <p class="text-2xl text-gray-200 txtFont mx-auto">Lorem ipsum, dolor sit amet consectetur
                 adipisicing elit.
                 Beatae corrupti nemo impedit, veritatis vel dolorem quis, rerum est molestiae commodi.</p>
         </div>
@@ -24,25 +24,24 @@
 
     <div class="flex flex-col justify-center bg-gray-50 py-16">
 
-        <h2 class="pb-9 interFont font-semibold text-5xl text-center text-gray-700">Latest Posts</h2>
+        <h2 class="pb-9 interFont font-semibold text-5xl text-center text-orange">Latest Posts</h2>
 
         <div class="flex flex-col sm:flex-row justify-center items-center sm:items-baseline">
 
             <% postsJsonData.forEach(element=> { %>
                 <div class="flex flex-col m-4 w-5/6 sm:w-1/4 shadow-xl overflow-hidden rounded-md">
-                    <div class="h-52 bg-red">
-                        <img src="">
+                    <div class="h-52 overflow-hidden">
+                        <img class="transform hover:scale-110 duration-300 ease" src="<%= element.imgSrc %> ">
                     </div>
-                    <div class="flex flex-col p-4 bg-skin max-h-96">
+                    <div class="flex flex-col p-4 bg-white max-h-96">
                         <a href="/<%= (element.postId) %>"
-                            class="border-l-4 pl-5 py-2 text-red border-red interFont text-2xl hover:text-gray-600 duration-200">
+                            class="border-l-4 pl-5 py-2 text-orange border-blue interFont text-2xl hover:text-gray-600 duration-200">
                             <%= element.postName %>
                         </a>
-                        <p class="text-lg interFont mt-3"><i class="fa fa-clock opacity-50 mr-3"></i>
+                        <p class="text-lg interFont mt-3 opacity-50"><i class="fa fa-clock mr-1"></i>
                             <%= element.updatedDate %>
                         </p>
-                        <p class="text-lg interFont mt-2 bg-red text-white w-min py-2 px-4 rounded">#<%= element.hashTag
-                                %>
+                        <p class="text-lg interFont mt-2 bg-orange text-gray-50 w-min py-2 px-4 rounded">#<%= element.hashTag %>
                         </p>
                     </div>
                 </div>
@@ -52,8 +51,6 @@
     </div>
 
     <%- include('./partials/subscribe.ejs');%>
-
-
 
 </body>
 
