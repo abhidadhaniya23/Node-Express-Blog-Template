@@ -10,10 +10,11 @@
 
 <body>
 
-    <div class="bg-gray-100 flex flex-row sm:flex-col justify-evenly items-center min-h-screen">
-        <div class=""><img class="rounded-full w-1/3" src="/img/poster.jpg"></div>
-        <div class="text-left w-1/2">
+    <div class="bg-gray-100 flex flex-col sm:flex-row justify-evenly items-center min-h-screen sm:py-0 py-16">
+        <div class=""><img class="rounded-full w-2/3 sm:w-1/2 mx-auto sm:block hidden" src="/img/poster.jpg"></div>
+        <div class="sm:text-left w-11/12 text-center sm:w-2/3">
             <h1 class="headerFont my-8 text-6xl text-gray-800 font-normal">TIME SQUARE BLOGS</h1>
+            <div class=""><img class="rounded-full w-2/3 mb-12 sm:w-1/2 mx-auto block sm:hidden" src="/img/poster.jpg"></div>
             <p class="text-2xl text-gray-500 txtFont mx-auto">Lorem ipsum, dolor sit amet consectetur
                 adipisicing elit.
                 Beatae corrupti nemo impedit, veritatis vel dolorem quis, rerum est molestiae commodi.</p>
@@ -25,10 +26,10 @@
 
         <h2 class="pb-9 interFont font-semibold text-5xl text-center text-gray-700">Latest Posts</h2>
 
-        <div class="flex flex-row justify-center items-baseline">
+        <div class="flex flex-col sm:flex-row justify-center items-center sm:items-baseline">
 
             <% postsJsonData.forEach(element=> { %>
-                <div class="flex flex-col m-4 w-1/4 shadow-xl overflow-hidden rounded-md">
+                <div class="flex flex-col m-4 w-5/6 sm:w-1/4 shadow-xl overflow-hidden rounded-md">
                     <div class="h-52 bg-red">
                         <img src="">
                     </div>

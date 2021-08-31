@@ -20,8 +20,8 @@ blogRouter.get('/', async (req, res) => {
     })
 })
 blogRouter.get('/:postId', async (req, res) => {
-    const post=postsData.find(post=>post.postId==req.params.postId)
-    res.render('post.ejs',{
+    const post = postsData.find(post => post.postId == req.params.postId)
+    res.render('post.ejs', {
         title: post.postName,
         content: post.Content,
         hashTag: post.hashTag,
