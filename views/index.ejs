@@ -6,51 +6,43 @@
         <title>Time Square Blogs</title>
         <%- include('./partials/stylesheetLink.ejs');%>
             <link rel="stylesheet" href="css/style.css">
+            <style>
+                html{
+                    scroll-behavior: smooth;
+                }
+            </style>
 </head>
 
 <body>
 
-    <div class="bg-orange flex flex-col sm:flex-row justify-evenly items-center min-h-screen sm:py-0 py-16">
-        <div class=""><img class="rounded-full w-2/3 sm:w-1/2 mx-auto sm:block hidden" src="/img/poster.jpg"></div>
-        <div class="sm:text-left w-11/12 text-center sm:w-2/3">
-            <h1 class="headerFont my-8 text-6xl text-gray-50 font-normal">TIME SQUARE BLOGS</h1>
-            <div class=""><img class="rounded-full w-2/3 mb-12 sm:w-1/2 mx-auto block sm:hidden" src="/img/poster.jpg"></div>
-            <p class="text-2xl text-gray-200 txtFont mx-auto">Lorem ipsum, dolor sit amet consectetur
-                adipisicing elit.
-                Beatae corrupti nemo impedit, veritatis vel dolorem quis, rerum est molestiae commodi.</p>
-        </div>
-    </div>
-
-
-    <div class="flex flex-col justify-center bg-gray-50 py-16">
-
-        <h2 class="pb-9 interFont font-semibold text-5xl text-center text-orange">Latest Posts</h2>
-
-        <div class="flex flex-col sm:flex-row justify-center items-center sm:items-baseline">
-
-            <% postsJsonData.forEach(element=> { %>
-                <div class="flex flex-col m-4 w-5/6 sm:w-1/4 shadow-xl overflow-hidden rounded-md">
-                    <div class="h-52 overflow-hidden">
-                        <img class="transform hover:scale-110 duration-300 ease" src="<%= element.imgSrc %> ">
-                    </div>
-                    <div class="flex flex-col p-4 bg-white max-h-96">
-                        <a href="/<%= (element.postId) %>"
-                            class="border-l-4 pl-5 py-2 text-orange border-blue interFont text-2xl hover:text-gray-600 duration-200">
-                            <%= element.postName %>
-                        </a>
-                        <p class="text-lg interFont mt-3 opacity-50"><i class="fa fa-clock mr-1"></i>
-                            <%= element.updatedDate %>
-                        </p>
-                        <p class="text-lg interFont mt-2 bg-orange text-gray-50 w-min py-2 px-4 rounded">#<%= element.hashTag %>
-                        </p>
-                    </div>
+    
+    <section class="bg-orange">
+        <!-- <div class="fixed top-0 w-screen z-50"> -->
+            <%- include('./partials/navbar.ejs');%>
+        <!-- </div> -->
+            <div class="flex flex-col sm:flex-row justify-evenly items-center sm:py-44 py-16 container mx-auto">
+                <div class=""><img
+                        class="rounded-full w-2/3 sm:w-1/2 mx-auto sm:block hidden border-4 p-1.5 border-gray-300"
+                        src="/img/logo/ts.png"></div>
+                <div class="sm:text-left w-11/12 text-center sm:w-2/3">
+                    <h1 class="headerFont my-8 text-6xl text-gray-50 font-normal">TIME SQUARE BLOGS</h1>
+                    <div class=""><img class="rounded-full w-2/3 mb-12 sm:w-1/2 mx-auto block sm:hidden border-4 p-1.5 border-gray-300"
+                            src="/img/logo/ts.png"></div>
+                    <p class="text-2xl text-gray-200 txtFont mx-auto">Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit.
+                        Beatae corrupti nemo impedit, veritatis vel dolorem quis, rerum est molestiae commodi.</p>
                 </div>
-                <% }) %>
-        </div>
+            </div>
+        </section>
 
-    </div>
+        
+        <%- include('./partials/latestPost.ejs');%>
 
-    <%- include('./partials/subscribe.ejs');%>
+        <%- include('./partials/subscribe.ejs');%>
+        
+        <%- include('./partials/footer.ejs');%>
+
+    <script src="js/navbar.js"></script>
 
 </body>
 

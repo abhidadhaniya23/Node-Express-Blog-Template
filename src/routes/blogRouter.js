@@ -1,32 +1,25 @@
-const { json } = require('express')
 const express = require('express')
 const blogRouter = express.Router()
-const path = require('path')
+// const path = require('path')
 const postsData = require('../json/postsData.json')
-
-// using middleware
-// blogRouter.use('/', async (req, res, next) => {
-//     try {
-//         console.log(postsData);
-//     } catch (error) {
-//         console.log(error);
-//     }
-//     next()
-// })
 
 blogRouter.get('/', async (req, res) => {
     res.render('index.ejs', {
-        postsJsonData: postsData
+        postsJsonData: await postsData
     })
 })
-blogRouter.get('/:postId', async (req, res) => {
-    const post = postsData.find(post => post.postId == req.params.postId)
-    res.render('post.ejs', {
-        title: post.postName,
-        content: post.Content,
-        hashTag: post.hashTag,
-        updateDate: post.updatedDate
-    })
+blogRouter.get('/post/:postId', (req, res) => {
+    try{
+        let post = postsData.find(post => post.postId === req.params.postId)
+        res.render('post.ejs', {
+            title: post.postName,
+            content: post.Content,
+            hashTag: post.hashTag,
+            updateDate: post.updatedDate
+        })
+    }catch(error){
+        console.log(error);
+    }
 })
 blogRouter.get('/about', async (req, res) => {
     res.render('about.ejs', {

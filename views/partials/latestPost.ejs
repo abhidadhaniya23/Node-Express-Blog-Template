@@ -1,0 +1,29 @@
+<section id="latest-blogs">
+    <div class="flex flex-col justify-center bg-gray-50 py-16">
+
+        <h2 class="pb-9 interFont font-semibold text-5xl text-center text-orange">Latest Posts</h2>
+
+        <div class="container mx-auto flex flex-col sm:flex-row justify-center items-center sm:items-baseline">
+
+            <% postsJsonData.forEach(element=> { %>
+                <div class="flex flex-col m-4 w-5/6 sm:w-1/4 shadow-xl overflow-hidden rounded-md">
+                    <div class="overflow-hidden">
+                        <img class="transform hover:scale-110 duration-500 ease" src="<%= element.imgSrc %> ">
+                    </div>
+                    <div class="flex flex-col p-4 bg-white max-h-96">
+                        <a href="/post/<%= (element.postId) %>"
+                            class="border-l-4 pl-5 py-2 text-orange border-blue interFont text-2xl hover:text-gray-600 duration-200">
+                            <%= element.postName %>
+                        </a>
+                        <p class="text-lg interFont mt-3 opacity-50"><i class="fa fa-clock mr-1"></i>
+                            <%= element.updatedDate %>
+                        </p>
+                        <p class="text-lg interFont mt-2 bg-orange text-gray-50 w-min py-2 px-4 rounded">#<%=
+                                element.hashTag %>
+                        </p>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</section>
