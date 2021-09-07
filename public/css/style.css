@@ -32618,11 +32618,12 @@ video {
 
 .header-sm{
   height: 14rem;
+  opacity: 0.8;
 }
 
 @media (min-width: 768px){
   .header-sm{
-    height: 24rem;
+    height: 18rem;
   }
 }
 
@@ -32637,11 +32638,12 @@ video {
 
 .header {
   height: 14rem;
+  opacity: 0.8;
 }
 
 @media (min-width: 768px){
   .header{
-    height: 24rem;
+    height: 18rem;
   }
 }
 
