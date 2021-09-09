@@ -32689,7 +32689,17 @@ video {
 }
 
 .navbar-active{
-  top: 6rem !important;
+  /* top: 6rem !important; */
+  height: 13rem;
+  transition-duration: 300ms;
+}
+
+.links-active{
+  display: flex;
+}
+
+.nav-shadow{
+  box-shadow: 0px 7px 30px 0px #ff45007a;
 }
 
 .nav-link::after{

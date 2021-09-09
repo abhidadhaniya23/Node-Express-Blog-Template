@@ -1,4 +1,4 @@
-<header class="relative text-gray-600 interFont bg-orange">
+<!-- <header class="relative text-gray-600 interFont bg-orange">
     <div class="container mx-auto flex p-4 flex-row md:flex-col justify-center md:items-start items-center">
         <div class="z-20 container flex flex-row justify-between items-center mx-auto px-5 py-4">
             <img class="text-xl w-40 border-4 rounded-sm border-solid border-white flex title-font font-medium items-center text-gray-900 md:mb-0"
@@ -19,6 +19,35 @@
         <div
             class="flex flex-row justify-center items-center self-center py-2 text-3xl px-3 border-white border-solid border-2 rounded text-orange bg-white hover:bg-orange hover:text-white duration-300">
             <a href="https://github.com"><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+</header> -->
+
+<!-- fixed top-0 z-10 w-screen -->
+<header class="bg-orange fixed top-0 z-50 w-screen nav-shadow">
+    <div class="container flex flex-col justify-between md:justify-between py-4 md:py-2 items-center w-screen mx-auto">
+        <div class="flex flex-row justify-around items-center w-screen md:px-12">
+            <div class="px-4 md:px-0">
+                <img class="text-xl w-40 border-4 rounded-sm border-solid border-white flex title-font font-medium items-center text-gray-900 md:mb-0" src="/img/logo/tsb.png" />
+            </div>
+            <nav class="z-20 interFont absolute w-screen md:top-0 -top-52 md:w-auto md:relative duration-300 md:pb-0 md:mx-auto hidden md:flex md:flex-row flex-col items-center text-base justify-center text-gray-100 bg-orange md:bg-transparent">
+                <a href="/" class="nav-link my-1.5 text-gray-100 text-xl mr-5 hover:text-gray-200 duration-200">Home</a>
+                <a href="/about" class="nav-link my-1.5 text-gray-100 text-xl mr-5 hover:text-gray-200 duration-200">About</a>
+                <a href="/#latest-blogs" class="nav-link my-1.5 text-gray-100 text-xl mr-5 hover:text-gray-200 duration-200">Blogs</a>
+                <a href="/#subscribe" class="nav-link my-1.5 text-gray-100 text-xl mr-5 hover:text-gray-200 duration-200">Subscribe</a>
+            </nav>
+            <div class="flex flex-row justify-center items-center px-4 md:px-0">
+                <button id="navBtn" class="block md:hidden text-white text-2xl border-solid border-2 border-l-2 border-white rounded px-3 py-1.5 mr-4 duration-300 hover:text-orange hover:bg-white"><i class="fa fa-bars"></i></button>
+                <a class="py-1 px-3 text-3xl border-white border-solid border-2 rounded text-orange bg-white hover:bg-orange hover:text-white duration-300" href="https://github.com"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+        <div class="navDiv">
+            <nav id="navBar" class="py-4 md:hidden z-20 interFont w-screen md:top-0 -top-52 md:w-auto md:relative duration-300 md:pb-0 md:mx-auto hidden md:flex-row flex-col items-center text-base justify-center text-gray-100">
+                <a href="/" class="nav-link my-1.5 text-gray-100 text-xl mr-5 hover:text-gray-200 duration-200">Home</a>
+                <a href="/about" class="nav-link my-1.5 text-gray-100 text-xl mr-5 hover:text-gray-200 duration-200">About</a>
+                <a href="/#latest-blogs" class="nav-link my-1.5 text-gray-100 text-xl mr-5 hover:text-gray-200 duration-200">Blogs</a>
+                <a href="/#subscribe" class="nav-link my-1.5 text-gray-100 text-xl mr-5 hover:text-gray-200 duration-200">Subscribe</a>
+            </nav>
         </div>
     </div>
 </header>

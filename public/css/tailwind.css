@@ -59,7 +59,14 @@
     letter-spacing: -0.8px;
 }
 .navbar-active{
-    top: 6rem !important;
+    /* top: 6rem !important; */
+    @apply h-52 duration-300;
+}
+.links-active{
+    @apply flex;
+}
+.nav-shadow{
+	box-shadow: 0px 7px 30px 0px #ff45007a;
 }
 .nav-link::after{
     content: "";
