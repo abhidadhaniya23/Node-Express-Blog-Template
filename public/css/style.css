@@ -32690,12 +32690,76 @@ video {
 
 .navbar-active{
   /* top: 6rem !important; */
-  height: 13rem;
-  transition-duration: 300ms;
+  padding-bottom: 12rem;
+  opacity: 1;
 }
 
 .links-active{
   display: flex;
+  opacity: 1;
+}
+
+.show-links{
+  opacity: 1;
+}
+
+.links-animate{
+  -webkit-animation-name: links;
+          animation-name: links;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /* animation-iteration-count:initial; */
+  opacity: 0;
+}
+
+.links-animate:nth-child(1){
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.links-animate:nth-child(2){
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.links-animate:nth-child(3){
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.links-animate:nth-child(4){
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+@-webkit-keyframes links{
+  0%{
+    left: -2.5rem;
+    opacity: 0;
+  }
+
+  100%{
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes links{
+  0%{
+    left: -2.5rem;
+    opacity: 0;
+  }
+
+  100%{
+    left: 0px;
+    opacity: 1;
+  }
 }
 
 .nav-shadow{
