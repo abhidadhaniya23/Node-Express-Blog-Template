@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tailwindcss -i public/css/tailwind.css -o public/css/style.css",
+    "building": "postcss public/css/tailwind.css -o public/css/style.css -w",
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
@@ -13,10 +14,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.3.4",
     "axios": "^0.21.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.2.8"
   },
   "devDependencies": {
