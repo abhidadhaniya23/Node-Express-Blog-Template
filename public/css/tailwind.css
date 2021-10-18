@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
     --heightPic: 50vh;
 }
 
-.header-sm{
+.header-sm {
     @apply md:h-72 h-56 opacity-80;
     /*Free Alternating Chevron SVG provided by SVGeez.com - CC 4.0 License - © 2019 Megan Young */
-    background-color:rgb(255, 255, 255);
-    fill:rgb(255, 64, 0);
-    background-size:128px 128px;
-    background-repeat:repeat;
-    background-image:url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cstyle%3E.st0%7Bfill:rgb(255, 64, 0)%7D%3C/style%3E%3Cpath class='st0' d='M125 250v125l125 125V375zM250 125L125 0v125l125 125zM250 250v125l125-125V125zM500 250V125L375 0v125zM500 500V375L375 250v125zM125 500V375L0 500zM375 500V375L250 500zM250 0v125L375 0zM0 125L125 0H0zM0 250v125l125-125V125z'/%3E%3C/svg%3E");
+    background-color: rgb(255, 255, 255);
+    fill: rgb(255, 64, 0);
+    background-size: 128px 128px;
+    background-repeat: repeat;
+    background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cstyle%3E.st0%7Bfill:rgb(255, 64, 0)%7D%3C/style%3E%3Cpath class='st0' d='M125 250v125l125 125V375zM250 125L125 0v125l125 125zM250 250v125l125-125V125zM500 250V125L375 0v125zM500 500V375L375 250v125zM125 500V375L0 500zM375 500V375L250 500zM250 0v125L375 0zM0 125L125 0H0zM0 250v125l125-125V125z'/%3E%3C/svg%3E");
 }
 
 .header {
@@ -37,38 +37,38 @@
     /* background-size: cover; */
 
     /*Free Alternating Chevron SVG provided by SVGeez.com - CC 4.0 License - © 2019 Megan Young */
-    background-color:rgb(255, 64, 0);
-    fill:#fff;
-    background-size:513px 513px;
-    background-repeat:repeat;
-    background-image:url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cstyle%3E.st0%7Bfill:rgba(255,255,255,1)%7D%3C/style%3E%3Cpath class='st0' d='M125 250v125l125 125V375zM250 125L125 0v125l125 125zM250 250v125l125-125V125zM500 250V125L375 0v125zM500 500V375L375 250v125zM125 500V375L0 500zM375 500V375L250 500zM250 0v125L375 0zM0 125L125 0H0zM0 250v125l125-125V125z'/%3E%3C/svg%3E");
+    background-color: rgb(255, 64, 0);
+    fill: #fff;
+    background-size: 513px 513px;
+    background-repeat: repeat;
+    background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cstyle%3E.st0%7Bfill:rgba(255,255,255,1)%7D%3C/style%3E%3Cpath class='st0' d='M125 250v125l125 125V375zM250 125L125 0v125l125 125zM250 250v125l125-125V125zM500 250V125L375 0v125zM500 500V375L375 250v125zM125 500V375L0 500zM375 500V375L250 500zM250 0v125L375 0zM0 125L125 0H0zM0 250v125l125-125V125z'/%3E%3C/svg%3E");
 }
 
 @font-face {
-    font-family: 'headerFont';
-    src: url('../fonts/font.woff');
+    font-family: "headerFont";
+    src: url("../fonts/font.woff");
 }
-.headerFont{
-    font-family: 'headerFont';
+.headerFont {
+    font-family: "headerFont";
 }
-.txtFont{
-    font-family: 'Gowun Dodum', sans-serif;
+.txtFont {
+    font-family: "Gowun Dodum", sans-serif;
 }
-.interFont{
-    font-family: 'Inter', sans-serif;
+.interFont {
+    font-family: "Inter", sans-serif;
     letter-spacing: -0.8px;
 }
-.navbar-active{
+.navbar-active {
     /* top: 6rem !important; */
     @apply pb-48 opacity-100;
 }
-.links-active{
+.links-active {
     @apply flex opacity-100;
 }
-.show-links{
+.show-links {
     @apply opacity-100;
 }
-.links-animate{
+.links-animate {
     animation-name: links;
     animation-duration: 0.4s;
     animation-timing-function: ease;
@@ -77,52 +77,56 @@
     /* animation-iteration-count:initial; */
     opacity: 0;
 }
-.links-animate:nth-child(1){
+.links-animate:nth-child(1) {
     animation-delay: 0.1s;
 }
-.links-animate:nth-child(2){
+.links-animate:nth-child(2) {
     animation-delay: 0.2s;
 }
-.links-animate:nth-child(3){
+.links-animate:nth-child(3) {
     animation-delay: 0.3s;
 }
-.links-animate:nth-child(4){
+.links-animate:nth-child(4) {
     animation-delay: 0.4s;
 }
-@keyframes links{
-    0%{
+@keyframes links {
+    0% {
         @apply -left-10 opacity-0;
     }
-    100%{
+    100% {
         @apply left-0 opacity-100;
     }
 }
 
-.nav-shadow{
-	box-shadow: 0px 7px 30px 0px #ff45007a;
-}
-.nav-link::after{
-    content: "";
-    display: block;
-    width: 0%;
-    height: 3px;
-    @apply bg-gray-100;
-    /* border-bottom: 12px solid black; */
-    transition: 0.4s ease;
-}
-.nav-link:hover::after{
-    width: 100%;
+.nav-shadow {
+    box-shadow: 0px 7px 30px 0px #ff45007a;
 }
 
-.navbar-link::after{
-    content: "";
-    display: block;
-    width: 0%;
-    height: 3px;
-    @apply bg-orange;
-    /* border-bottom: 12px solid black; */
-    transition: 0.4s ease;
+.nav-link,
+.navbar-link {
+    position: relative;
 }
-.navbar-link:hover::after{
+.nav-link:after,
+.navbar-link:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #fff;
+    transition: width 0.2s ease;
+    -webkit-transition: width 0.2s ease;
+}
+
+.nav-link:hover:after,
+.navbar-link:hover:after {
     width: 100%;
+    left: 0;
+    background: #fff;
+}
+
+.navbar-link::after {
+    @apply !bg-orange;
 }
